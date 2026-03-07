@@ -70,7 +70,7 @@ li {
     text-decoration: none;
 }
 
-#landing {
+#landing, #explore {
     background-color: rgb(115, 66, 214, 0.1);
 }
 
@@ -240,6 +240,15 @@ button:active {
     display: flex;
 }
 
+.books-recent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*
+display: flex;
+flex-wrap: wrap;
+    */
+}
+
 .book {
     width: 25%;
     padding: 24px;
@@ -248,6 +257,7 @@ button:active {
 .book__img {
     max-height: 380px;
     transition: transform 300ms ease;
+    cursor: no-drop;
 }
 
 .book__img__wrapper {
@@ -259,4 +269,33 @@ button:active {
 
 .book:hover .book__img {
     transform: scale(1.05);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+    padding-right: 8px;
+    color: #bfbfbf;
+}
+
+/* Explore Section and Elements */
+
+.explore-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
 }
